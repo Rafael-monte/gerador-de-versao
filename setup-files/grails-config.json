@@ -1,0 +1,15 @@
+{
+    "version": "0.0.0",
+    "environment": "",
+    "command": "grails -Dgrails.env=$ENV_NAME$",
+    "AVAILABLE_ENVIRONMENTS": [
+        "hom", "prod", "whatsapp2", "rovitex"
+    ],
+    "JS_ENV_URLS": [
+        "https://whatsapp.plinx.com.br",
+        "https://whatsapp2-supervisor.plinx.com.br",
+        "https://homologacao-supervisor.plinx.com.br",
+        "https://rovitex-supervisor.plinx.com.br"
+    ],
+    "ENV_NAME_TOKEN": "$ENV_NAME$"
+}

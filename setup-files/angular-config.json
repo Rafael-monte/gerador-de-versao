@@ -1,0 +1,14 @@
+{
+    "version": "0.0.0",
+    "environment": "",
+    "command": "npm run build-$ENV_NAME$",
+    "generateAppAfterVersion": true,
+    "appCommands": [
+        "package-windows-$ENV_NAME$",
+        "create-installer-windows-$ENV_NAME$"
+    ],
+    "AVAILABLE_ENVIRONMENTS": [
+        "hom", "prod", "whatsapp2", "rovitex"
+    ],
+    "ENV_NAME_TOKEN": "$ENV_NAME$"
+}

@@ -1,0 +1,10 @@
+{
+    "version": "0.0.0",
+    "environment": "",
+    "command": "gradew -Pversion=$ENV_VERSION$ -Dspring.profile.active=$ENV_NAME$",
+    "AVAILABLE_ENVIRONMENTS": [
+        "hom", "prod", "whatsapp2", "rovitex"
+    ],
+    "ENV_NAME_TOKEN": "$ENV_NAME$",
+    "ENV_VERSION_TOKEN": "$ENV_VERSION$"
+}
