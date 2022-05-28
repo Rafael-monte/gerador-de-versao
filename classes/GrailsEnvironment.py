@@ -5,9 +5,9 @@ class GrailsEnvironment(AbstractEnvironment):
         self.environment_name='grails'
         self.add_aditional_attributes(self.get_environment_from_file());
         
-    def add_aditional_attributes(self, config_i):
+    def add_aditional_attributes(self, config_i) -> None:
         self.JS_ENV_URLS=config_i.JS_ENV_URLS;
 
-    def show(self):
+    def show(self) -> None:
         urls=','.join(self.JS_ENV_URLS)
         print(f'Versão: {self.version}, jsUrls:{urls}');

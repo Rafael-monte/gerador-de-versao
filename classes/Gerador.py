@@ -9,21 +9,26 @@ class Gerador:
     args_controller = ArgsController()
     terminal=TerminalController()
     
-    def start(self, args):
+    def start(self, args) -> None:
         self.args_controller.get_operation_by_args(args);
         if len(self.args_controller.projects_to_versionate) > 0:
             self.filtrar_projetos_para_versionar()
             self.buscar_ambiente_para_versionar()
+            self.iniciar_versionamento_projetos()
         else:
             self.terminal.print_error('Não encontrei nenhum projeto para versionar!')
 
-    def filtrar_projetos_para_versionar(self):
+    def filtrar_projetos_para_versionar(self) -> None:
         self.projetos = list(filter(lambda projeto:
             projeto.environment_name in self.args_controller.projects_to_versionate, self.projetos))
         
-    def buscar_ambiente_para_versionar(self):
+    def buscar_ambiente_para_versionar(self) -> None:
         if self.args_controller.environment_to_versionate != '':
             for projeto in self.projetos:
                 projeto.environment = self.args_controller.environment_to_versionate
         else:
             self.terminal.print_warn('Nenhum ambiente informado, serao usados os ambientes que estão configurados nos arquivos js')
+    
+    def iniciar_versionamento_projetos(self) -> None:
+        for projeto in self.projetos:
+            projeto.versionar();
