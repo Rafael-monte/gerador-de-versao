@@ -1,4 +1,4 @@
-from AbstractEnvironment import AbstractEnvironment
+from classes.AbstractEnvironment import AbstractEnvironment
 class GrailsEnvironment(AbstractEnvironment):
     JS_ENV_URLS=[]
     def __init__(self):

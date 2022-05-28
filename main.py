@@ -1,5 +1,5 @@
-from classes.AngularEnvironment import AngularEnvironment
+from classes.Gerador import Gerador
+from sys import argv
+gerador = Gerador()
 
-ang_env = AngularEnvironment()
-
-ang_env.show() 
+gerador.start(argv)
